@@ -13,11 +13,6 @@
     --accent-hover: #1d4ed8;
     --text: #1a1a1a;
     --text-muted: #666;
-    --danger: #dc2626;
-    --success: #16a34a;
-    --progress-bg: #e5e7eb;
-    --roman-bg: #f0f4ff;
-    --lang-badge: #eef2ff;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,783 +22,90 @@
     background: var(--bg);
     color: var(--text);
     line-height: 1.6;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 20px 24px 60px;
-  }
-
-  /* ─── Header ─── */
-  .header {
-    text-align: center;
-    padding: 32px 0 24px;
-    border-bottom: 2px solid var(--border);
-    margin-bottom: 28px;
-  }
-  .header h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 4px;
-  }
-  .header .subtitle {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-  }
-
-  /* ─── Progress ─── */
-  .progress-wrap {
-    position: sticky;
-    top: 0;
-    background: var(--bg);
-    padding: 12px 0;
-    z-index: 100;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 24px;
-  }
-  .progress-bar-outer {
-    height: 8px;
-    background: var(--progress-bg);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .progress-bar-inner {
-    height: 100%;
-    background: var(--accent);
-    border-radius: 4px;
-    transition: width 0.3s ease;
-  }
-  .progress-text {
     display: flex;
-    justify-content: space-between;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    margin-top: 6px;
-  }
-
-  /* ─── Sections ─── */
-  .section { margin-bottom: 32px; }
-  .section h2 {
-    font-size: 1.15rem;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ─── Instructions ─── */
-  .instructions {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px;
-    margin-bottom: 28px;
-  }
-  .instructions p { margin-bottom: 10px; }
-  .instructions .scale-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 14px 0;
-    font-size: 0.92rem;
-  }
-  .scale-table td, .scale-table th {
-    padding: 6px 10px;
-    border: 1px solid var(--border);
-    text-align: left;
-  }
-  .scale-table th { background: #f5f5f5; width: 100px; text-align: center; }
-  .warning-box {
-    background: #fef3c7;
-    border: 1px solid #f59e0b;
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-top: 14px;
-    font-size: 0.9rem;
-  }
-
-  /* ─── ID input ─── */
-  .id-section {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  .id-section label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 1.05rem;
-  }
-  .id-section input {
-    padding: 10px 16px;
-    font-size: 1rem;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    width: 260px;
-    text-align: center;
-    outline: none;
-    transition: border-color 0.2s;
-  }
-  .id-section input:focus { border-color: var(--accent); }
-
-  /* ─── Stimulus card ─── */
-  .stimulus-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 22px 24px;
-    margin-bottom: 20px;
-    transition: box-shadow 0.2s;
-  }
-  .stimulus-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-  .stimulus-card .item-header {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 14px;
-  }
-  .item-number {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--accent);
-  }
-  .lang-badge {
-    display: inline-block;
-    background: var(--lang-badge);
-    color: var(--accent);
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 12px;
-    text-transform: uppercase;
+    min-height: 100vh;
+    padding: 20px;
   }
 
-  /* text display */
-  .text-block {
-    margin-bottom: 14px;
-  }
-  .original-text {
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 6px;
-  }
-  .roman-text {
-    background: var(--roman-bg);
-    padding: 8px 14px;
-    border-radius: 6px;
-    font-size: 0.92rem;
-    color: #4338ca;
-    font-style: italic;
-    font-family: 'Consolas', 'Menlo', monospace;
-  }
-
-  /* audio */
-  .audio-wrap {
-    margin: 14px 0;
-  }
-  .audio-wrap audio {
-    width: 100%;
-    height: 42px;
-  }
-
-  /* MOS rating */
-  .mos-rating {
-    margin-top: 12px;
-  }
-  .mos-rating .rating-label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    display: block;
-  }
-  .mos-options {
-    display: flex;
-    gap: 8px;
-  }
-  .mos-options label {
-    flex: 1;
-    text-align: center;
-    cursor: pointer;
-  }
-  .mos-options input[type="radio"] { display: none; }
-  .mos-btn {
-    display: block;
-    padding: 10px 0;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: all 0.15s;
+  .container {
     background: var(--card-bg);
-  }
-  .mos-btn:hover { border-color: var(--accent); background: #f0f4ff; }
-  .mos-options input[type="radio"]:checked + .mos-btn {
-    border-color: var(--accent);
-    background: var(--accent);
-    color: white;
-  }
-  .mos-scale-labels {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    margin-top: 4px;
-    padding: 0 4px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
   }
 
-  /* unanswered highlight */
-  .stimulus-card.unanswered {
-    border-color: var(--danger);
-    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
-  }
-
-  /* ─── Buttons ─── */
-  .btn {
-    display: inline-block;
-    padding: 12px 36px;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-  }
-  .btn-primary:hover { background: var(--accent-hover); }
-  .btn-secondary {
-    background: white;
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
     color: var(--text);
-    border: 2px solid var(--border);
   }
-  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-danger {
-    background: var(--danger);
-    color: white;
-  }
-  .btn-danger:hover { background: #b91c1c; }
-  .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+
+  .subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 36px;
   }
 
   .btn-group {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 28px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-  }
-
-  /* ─── Break screen ─── */
-  .break-screen {
-    text-align: center;
-    padding: 60px 20px;
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-  }
-  .break-screen h3 { font-size: 1.3rem; margin-bottom: 12px; }
-  .break-screen p { color: var(--text-muted); margin-bottom: 20px; }
-
-  /* ─── Finish ─── */
-  .finish-screen {
-    text-align: center;
-    padding: 60px 20px;
-  }
-  .finish-screen h2 {
-    font-size: 1.5rem;
-    color: var(--success);
-    margin-bottom: 12px;
-    border: none;
-  }
-
-  /* ─── Resume banner ─── */
-  .resume-banner {
-    background: #ecfdf5;
-    border: 1px solid #6ee7b7;
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 16px;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-  }
-  .resume-banner p {
-    font-size: 0.92rem;
-    color: #065f46;
   }
 
-  /* ─── Responsive ─── */
-  @media (max-width: 600px) {
-    body { padding: 12px 14px 40px; }
-    .mos-options { gap: 4px; }
-    .mos-btn { padding: 8px 0; font-size: 0.85rem; }
+  .btn {
+    display: inline-block;
+    padding: 16px 48px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  .btn:active {
+    transform: translateY(0);
+  }
+
+  .info {
+    margin-top: 28px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.7;
   }
 </style>
 </head>
-
 <body>
 
-<!-- ═══════════════════════════════════════════
-     PHASE 1: Instructions + Evaluator ID
-     ═══════════════════════════════════════════ -->
-<div id="phase-intro">
-
-  <div class="header">
-    <h1>Multilingual TTS MOS Evaluation</h1>
-    <p class="subtitle">UR-BERT · Interspeech 2025</p>
-  </div>
-
-  <div class="instructions">
-    <div class="section">
-      <h2>실험 안내</h2>
-      <p>
-        본 실험은 다국어 텍스트 음성 변환(TTS) 시스템의 음성 품질을 평가하는 실험입니다.
-        각 샘플에 대해 <b>원문 텍스트</b>와 <b>발음 가이드(Roman script)</b>가 함께 제공됩니다.
-      </p>
-      <p>
-        오디오를 청취한 후, 아래 평가 기준에 따라 <b>1점부터 5점까지 절대적인 점수</b>를 부여해 주세요.
-        각 샘플은 서로 비교하지 말고, 해당 샘플 자체의 품질만 평가해 주세요.
-      </p>
-    </div>
-
-    <div class="section">
-      <h2>평가 기준 (MOS)</h2>
-      <table class="scale-table">
-        <tr><th>5</th><td><b>Excellent</b> : 자연스럽고 명료하며, 원어민 수준의 발음과 운율</td></tr>
-        <tr><th>4</th><td><b>Good</b> : 약간 부자연스러운 부분이 있으나 전반적으로 자연스러움</td></tr>
-        <tr><th>3</th><td><b>Fair</b> : 부자연스러운 부분이 반복적으로 느껴지나 내용 이해에는 문제 없음</td></tr>
-        <tr><th>2</th><td><b>Poor</b> : 기계음/왜곡이 자주 들리고, 발음 오류가 많아 이해하기 어려움</td></tr>
-        <tr><th>1</th><td><b>Bad</b> : 매우 부자연스럽고 내용을 거의 이해할 수 없음</td></tr>
-      </table>
-    </div>
-
-    <div class="warning-box">
-      ⚠️ <b>유의사항</b><br>
-      · 🎧 조용한 환경에서 <b>유선 헤드폰</b>을 사용해 주세요 (블루투스 사용 금지).<br>
-      · 각 오디오는 <b>전체를 끝까지 청취</b>한 후 평가해 주세요.<br>
-      · 총 <b id="total-count">225</b>개 샘플이며, 약 <b id="est-time">45~60분</b> 소요됩니다.<br>
-      · <b>진행 상황은 자동으로 저장</b>됩니다. 브라우저를 닫았다가 다시 열어도 이어할 수 있습니다.<br>
-      · 실험 완료 시 결과 파일(CSV)이 자동으로 다운로드됩니다.
-    </div>
-  </div>
-
-  <div class="id-section">
-    <label for="evaluator-id">평가자 ID를 입력해 주세요</label>
-    <input type="text" id="evaluator-id" placeholder="예: listener_01" autocomplete="off">
-    <br><br>
-    <button class="btn btn-primary" id="start-btn" onclick="startEvaluation()">시작하기</button>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════
-     PHASE 2: Evaluation
-     ═══════════════════════════════════════════ -->
-<div id="phase-eval" style="display:none;">
-
-  <div class="header">
-    <h1>Multilingual TTS MOS Evaluation</h1>
-    <p class="subtitle" id="eval-subtitle"></p>
-  </div>
-
-  <div class="progress-wrap" id="progress-wrap">
-    <div class="progress-bar-outer">
-      <div class="progress-bar-inner" id="progress-bar" style="width:0%"></div>
-    </div>
-    <div class="progress-text">
-      <span id="progress-label">0 / 225</span>
-      <span id="page-label">Page 1 / 23</span>
-    </div>
-  </div>
-
-  <div id="resume-banner" class="resume-banner" style="display:none;">
-    <p>💾 이전 진행 상황이 저장되어 있습니다. 이어서 진행하시겠습니까?</p>
-    <div>
-      <button class="btn btn-primary" onclick="resumeEval()">이어하기</button>
-      <button class="btn btn-secondary" onclick="restartEval()" style="margin-left:8px;">처음부터</button>
-    </div>
-  </div>
-
-  <div id="container"></div>
+<div class="container">
+  <h1>🎧 UR-BERT Multilingual TTS Evaluation</h1>
+  <p class="subtitle">INTERSPEECH 2026 · MOS Listening Test</p>
 
   <div class="btn-group">
-    <button class="btn btn-secondary" id="prev-btn" onclick="prevPage()">← 이전</button>
-    <button class="btn btn-primary" id="next-btn" onclick="nextPage()">다음 →</button>
+    <a href="./A/" class="btn">Type A</a>
+    <a href="./B/" class="btn">Type B</a>
   </div>
+
+  <p class="info">
+    배정받은 실험 유형(A 또는 B)을 선택해 주세요.<br>
+    소요 시간: 약 20~30분
+  </p>
 </div>
-
-<!-- ═══════════════════════════════════════════
-     PHASE 3: Finish
-     ═══════════════════════════════════════════ -->
-<div id="phase-finish" style="display:none;">
-  <div class="finish-screen">
-    <h2>✅ 실험이 완료되었습니다!</h2>
-    <p>결과 파일이 자동으로 다운로드됩니다.</p>
-    <p style="color:var(--text-muted); margin-top:12px;">다운로드가 시작되지 않으면 아래 버튼을 클릭해 주세요.</p>
-    <br>
-    <button class="btn btn-primary" onclick="downloadResults()">결과 다운로드</button>
-    <p style="margin-top:30px; font-size:1.1rem;">감사합니다! 🎉</p>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════
-     Config (external) + Logic
-     ═══════════════════════════════════════════ -->
-<script src="config.js"></script>
-<script>
-/********************************************************
- * STATE
- ********************************************************/
-let evaluatorId = "";
-let trials = [];        // shuffled stimuli
-let pageIndex = 0;
-let results = {};       // { stimulus_id: { mos: "5", timestamp: "..." } }
-const ITEMS_PER_PAGE = EVAL_CONFIG.itemsPerPage || 10;
-const STORAGE_KEY = EVAL_CONFIG.storageKey || "urbert_eval_v1";
-
-/********************************************************
- * SEEDED SHUFFLE (deterministic per evaluator)
- ********************************************************/
-function seededRandom(seed) {
-  // Simple hash-based PRNG (xorshift32)
-  let s = 0;
-  for (let i = 0; i < seed.length; i++) {
-    s = ((s << 5) - s) + seed.charCodeAt(i);
-    s |= 0;
-  }
-  return function () {
-    s ^= s << 13;
-    s ^= s >> 17;
-    s ^= s << 5;
-    return (s >>> 0) / 4294967296;
-  };
-}
-
-function shuffleWithSeed(array, seed) {
-  const rng = seededRandom(seed);
-  const arr = array.slice();
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-/********************************************************
- * LOCAL STORAGE helpers
- ********************************************************/
-function saveState() {
-  const state = {
-    evaluatorId,
-    trials: trials.map(t => t.id),
-    pageIndex,
-    results,
-    timestamp: new Date().toISOString()
-  };
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-}
-
-function loadState() {
-  const raw = localStorage.getItem(STORAGE_KEY);
-  if (!raw) return null;
-  try { return JSON.parse(raw); } catch { return null; }
-}
-
-function clearState() {
-  localStorage.removeItem(STORAGE_KEY);
-}
-
-/********************************************************
- * INITIALIZATION
- ********************************************************/
-function startEvaluation() {
-  evaluatorId = document.getElementById("evaluator-id").value.trim();
-  if (!evaluatorId) {
-    alert("평가자 ID를 입력해 주세요.");
-    return;
-  }
-
-  // Update total count in instructions
-  document.getElementById("total-count").textContent = stimuli.length;
-
-  const saved = loadState();
-
-  // Check if there's a saved session for this evaluator
-  if (saved && saved.evaluatorId === evaluatorId && Object.keys(saved.results).length > 0) {
-    // Restore trial order
-    const idToStimulus = {};
-    stimuli.forEach(s => { idToStimulus[s.id] = s; });
-    trials = saved.trials.map(id => idToStimulus[id]).filter(Boolean);
-    results = saved.results || {};
-    pageIndex = saved.pageIndex || 0;
-
-    showEvalPhase();
-    document.getElementById("resume-banner").style.display = "flex";
-    loadPage();
-  } else {
-    // Fresh start
-    trials = shuffleWithSeed(stimuli, evaluatorId);
-    results = {};
-    pageIndex = 0;
-
-    showEvalPhase();
-    loadPage();
-    saveState();
-  }
-}
-
-function resumeEval() {
-  document.getElementById("resume-banner").style.display = "none";
-}
-
-function restartEval() {
-  document.getElementById("resume-banner").style.display = "none";
-  trials = shuffleWithSeed(stimuli, evaluatorId);
-  results = {};
-  pageIndex = 0;
-  saveState();
-  loadPage();
-}
-
-function showEvalPhase() {
-  document.getElementById("phase-intro").style.display = "none";
-  document.getElementById("phase-eval").style.display = "block";
-  document.getElementById("eval-subtitle").textContent = `Evaluator: ${evaluatorId}`;
-}
-
-/********************************************************
- * RENDER PAGE
- ********************************************************/
-function loadPage() {
-  const container = document.getElementById("container");
-  container.innerHTML = "";
-
-  const start = pageIndex * ITEMS_PER_PAGE;
-  const current = trials.slice(start, start + ITEMS_PER_PAGE);
-  const totalPages = Math.ceil(trials.length / ITEMS_PER_PAGE);
-
-  current.forEach((t, idx) => {
-    const globalIdx = start + idx + 1;
-    const card = document.createElement("div");
-    card.className = "stimulus-card";
-    card.id = `card-${t.id}`;
-
-    // Check for existing answer
-    const existing = results[t.id];
-    const checkedVal = existing ? existing.mos : null;
-
-    card.innerHTML = `
-      <div class="item-header">
-        <span class="item-number">Item ${globalIdx} / ${trials.length}</span>
-        <span class="lang-badge">${t.lang}</span>
-      </div>
-      <div class="text-block">
-        <div class="original-text">${escapeHtml(t.text)}</div>
-        <div class="roman-text">${escapeHtml(t.roman)}</div>
-      </div>
-      <div class="audio-wrap">
-        <audio controls preload="none">
-          <source src="${t.audio}" type="audio/${getAudioType(t.audio)}">
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mos-rating">
-        <span class="rating-label">Quality (MOS):</span>
-        <div class="mos-options">
-          ${[1,2,3,4,5].map(score => `
-            <label>
-              <input type="radio" name="mos_${t.id}" value="${score}"
-                ${checkedVal == score ? 'checked' : ''}
-                onchange="onRate('${t.id}', ${score})">
-              <span class="mos-btn">${score}</span>
-            </label>
-          `).join("")}
-        </div>
-        <div class="mos-scale-labels">
-          <span>Bad</span>
-          <span>Poor</span>
-          <span>Fair</span>
-          <span>Good</span>
-          <span>Excellent</span>
-        </div>
-      </div>
-    `;
-
-    container.appendChild(card);
-  });
-
-  updateProgress();
-  updateButtons();
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-/********************************************************
- * RATING HANDLER
- ********************************************************/
-function onRate(stimulusId, score) {
-  results[stimulusId] = {
-    mos: score,
-    timestamp: new Date().toISOString()
-  };
-  // Remove unanswered highlight if present
-  const card = document.getElementById(`card-${stimulusId}`);
-  if (card) card.classList.remove("unanswered");
-  saveState();
-  updateProgress();
-}
-
-/********************************************************
- * NAVIGATION
- ********************************************************/
-function nextPage() {
-  const start = pageIndex * ITEMS_PER_PAGE;
-  const current = trials.slice(start, start + ITEMS_PER_PAGE);
-  const totalPages = Math.ceil(trials.length / ITEMS_PER_PAGE);
-
-  // Check all items on current page are rated
-  let allRated = true;
-  for (const t of current) {
-    if (!results[t.id]) {
-      allRated = false;
-      const card = document.getElementById(`card-${t.id}`);
-      if (card) card.classList.add("unanswered");
-    }
-  }
-
-  if (!allRated) {
-    alert("이 페이지의 모든 항목을 평가해 주세요.");
-    return;
-  }
-
-  pageIndex++;
-  saveState();
-
-  if (pageIndex >= totalPages) {
-    finish();
-  } else {
-    loadPage();
-  }
-}
-
-function prevPage() {
-  if (pageIndex <= 0) return;
-  pageIndex--;
-  saveState();
-  loadPage();
-}
-
-function updateButtons() {
-  const totalPages = Math.ceil(trials.length / ITEMS_PER_PAGE);
-  document.getElementById("prev-btn").disabled = (pageIndex === 0);
-
-  const nextBtn = document.getElementById("next-btn");
-  if (pageIndex >= totalPages - 1) {
-    nextBtn.textContent = "완료 및 제출 ✓";
-  } else {
-    nextBtn.textContent = "다음 →";
-  }
-}
-
-function updateProgress() {
-  const answered = Object.keys(results).length;
-  const total = trials.length;
-  const pct = total > 0 ? (answered / total * 100) : 0;
-  const totalPages = Math.ceil(total / ITEMS_PER_PAGE);
-
-  document.getElementById("progress-bar").style.width = pct + "%";
-  document.getElementById("progress-label").textContent = `${answered} / ${total}`;
-  document.getElementById("page-label").textContent = `Page ${pageIndex + 1} / ${totalPages}`;
-}
-
-/********************************************************
- * FINISH & DOWNLOAD
- ********************************************************/
-function finish() {
-  document.getElementById("phase-eval").style.display = "none";
-  document.getElementById("phase-finish").style.display = "block";
-  downloadResults();
-  clearState();
-}
-
-function downloadResults() {
-  // Build CSV with columns: evaluator, stimulus, model, lang, mos, timestamp
-  const header = "evaluator,stimulus,model,lang,mos,timestamp\n";
-  const idToStimulus = {};
-  stimuli.forEach(s => { idToStimulus[s.id] = s; });
-
-  let csv = header;
-  // Output in trial order
-  for (const t of trials) {
-    const r = results[t.id];
-    if (r) {
-      const s = idToStimulus[t.id];
-      csv += `${evaluatorId},${t.id},${s ? s.model : ""},${s ? s.lang : ""},${r.mos},${r.timestamp}\n`;
-    }
-  }
-
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `mos_${evaluatorId}_${new Date().toISOString().slice(0,10)}.csv`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
-
-/********************************************************
- * UTILITIES
- ********************************************************/
-function escapeHtml(str) {
-  const div = document.createElement("div");
-  div.textContent = str;
-  return div.innerHTML;
-}
-
-function getAudioType(path) {
-  if (path.endsWith(".mp3")) return "mpeg";
-  if (path.endsWith(".ogg")) return "ogg";
-  if (path.endsWith(".opus")) return "opus";
-  return "wav";
-}
-
-/********************************************************
- * KEYBOARD SHORTCUT: 1-5 for quick rating
- * (rates the first unanswered item on the page)
- ********************************************************/
-document.addEventListener("keydown", function (e) {
-  // Only in eval phase
-  if (document.getElementById("phase-eval").style.display === "none") return;
-  
-  const key = parseInt(e.key);
-  if (key >= 1 && key <= 5) {
-    const start = pageIndex * ITEMS_PER_PAGE;
-    const current = trials.slice(start, start + ITEMS_PER_PAGE);
-    
-    // Find first unanswered, or last item if all answered
-    let target = null;
-    for (const t of current) {
-      if (!results[t.id]) { target = t; break; }
-    }
-    if (!target) return;
-
-    const radio = document.querySelector(`input[name="mos_${target.id}"][value="${key}"]`);
-    if (radio) {
-      radio.checked = true;
-      onRate(target.id, key);
-    }
-  }
-});
-
-/********************************************************
- * ON LOAD: update total count
- ********************************************************/
-document.getElementById("total-count").textContent = stimuli.length;
-const estMin = Math.ceil(stimuli.length * 15 / 60); // ~15s per sample
-document.getElementById("est-time").textContent = `${estMin}~${estMin + 10}분`;
-</script>
 
 </body>
 </html>
